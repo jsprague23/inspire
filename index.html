@@ -3,7 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -15,7 +16,7 @@
 
 		<div class="row">
 
-			<div class="col-4" id="weather">
+			<div class="col-4 weather" id="weather">
 				Your Weather Template
 			</div>
 
@@ -24,9 +25,6 @@
 		<div class="row">
 
 
-			<div class="col-4" id="quote">
-				The Quote
-			</div>
 
 			<div class="col-4">
 
@@ -35,9 +33,9 @@
 
 				<div class="todo" style="width: 18rem">
 
-<div id="todo-list"></div>
+					<div id="todo-list"></div>
 					<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-						<label for="description">Open Me</label>
+						<label for="description"></label>
 						<br>
 						<input type="text" name="description" placeholder="description">
 						<br>
@@ -49,6 +47,14 @@
 					</form>
 
 				</div>
+			</div>
+		</div>
+		<div class="row d-flex flex-fill justify-content-center align-items-end quote">
+			
+				<div class="col" id="quote">
+					The Quote
+				
+	
 			</div>
 		</div>
 

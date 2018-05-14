@@ -1,9 +1,19 @@
 .todo {
     flex-direction:column;
-        /* padding: 10px; */
+        margin:10rem;      
         background-color: white;
         max-height: 25;
         overflow: hidden;
-        transition: max-height 0.2s ease-out;
+        transition: max-height 0.5s ease-out;
     
+}
+
+.quote{
+    color:white;
+    max-height: 75rem;
+    padding: 23rem 0rem 2rem 2rem;
+}
+
+.weather{
+color:white;
 }
