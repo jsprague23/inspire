@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
 	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -20,17 +21,6 @@
 
 		</div>
 
-		<!-- <div class="row">
-
-			<!-- <div id="bgImage"></div> -->
-<!-- 
-			<div id="">
-				<h1>What is your main focus today?</h1> -->
-<!-- 
-				how to get name to enter and stay on screen?
-			</div> -->
-<!-- 
-		</div> -->
 		<div class="row">
 
 
@@ -41,13 +31,13 @@
 			<div class="col-4">
 
 
-				<button type="button" class="Collapsible todo">Write a To-do:</button>
+				<button type="button" class="Collapsible todo">Toggle Open/Closed:</button>
 
 				<div class="todo" style="width: 18rem">
 
 <div id="todo-list"></div>
 					<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-						<label for="description">Description</label>
+						<label for="description">Open Me</label>
 						<br>
 						<input type="text" name="description" placeholder="description">
 						<br>

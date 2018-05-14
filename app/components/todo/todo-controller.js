@@ -23,7 +23,7 @@ function TodoController() {
 		for (let i = 0; i < todos.length; i++) {
 			const todo = todos[i];
 			template += `
-			<li>Description:${todo.description}</li>
+			<li>Description:${todo.description}<button onclick="app.controllers.todoController.removeTodo('${todo._id}')"type="button"id="" class="btn btn-default btn-sm"><span class="fas fa-trash"></span>Trash</button></li>
 			`
 			
 		}
@@ -47,7 +47,6 @@ function TodoController() {
 	this.addTodoFromForm = function (e) {
 		e.preventDefault() // <-- hey this time its a freebie don't forget this
 		// TAKE THE INFORMATION FORM THE FORM
-		debugger
 		var form = e.target
 		var todo = {
 			description: form.description.value,      //has to be a string
@@ -70,16 +69,11 @@ function TodoController() {
 		
 	}
 
+this.removeTodo= function(todoId){
+	todoService.removeTodo(todoId,getTodos)
+}
 	
 
-	this.deleteCar = function (todoId) {
-		$.ajax({
-			method: 'DELETE',
-			url: baseUrl + '/' + id
-		}).then(res => {
-			loadCars()
-		})
-	}
 	
 	// ask the service to run the remove todo with this id
 	
