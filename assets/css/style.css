@@ -1,0 +1,9 @@
+.todo {
+    flex-direction:column;
+        /* padding: 10px; */
+        background-color: white;
+        max-height: 25;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    
+}

@@ -3,24 +3,75 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body id="body">
-	<div id="weather">
-		Your Weather Template
-	</div>
 
-	<div id="quote">
-		The Quote
-	</div>
+	<section class="container-fluid">
 
-	<div id="todo">
-		<form onsubmit=""></form>
-		A Todo List
-	</div>
+		<div class="row">
+
+			<div class="col-4" id="weather">
+				Your Weather Template
+			</div>
+
+		</div>
+
+		<!-- <div class="row">
+
+			<!-- <div id="bgImage"></div> -->
+<!-- 
+			<div id="">
+				<h1>What is your main focus today?</h1> -->
+<!-- 
+				how to get name to enter and stay on screen?
+			</div> -->
+<!-- 
+		</div> -->
+		<div class="row">
 
 
+			<div class="col-4" id="quote">
+				The Quote
+			</div>
+
+			<div class="col-4">
+
+
+				<button type="button" class="Collapsible todo">Write a To-do:</button>
+
+				<div class="todo" style="width: 18rem">
+
+
+					<form onsubmit="app.controllers.TodoController.addTodoFromForm(event)">
+						<label for="description">Description</label>
+						<br>
+						<input type="text" name="description" placeholder="description">
+						<br>
+						<label for="completed">Completed</label>
+						<input type="checkbox" name="completed" placeholder="Completed">
+						<br>
+						<label for="user">User email</label>
+						<br>
+						<input type="email" name="user" placeholder="user">
+						<button type="submit">Submit</button>
+
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+	</section>
 
 
 	<!--JS Libraries-->

@@ -1,7 +1,7 @@
-function TodoService() {
+function TodoService(cb) {
 	// A local copy of your todos
 	var todoList = []
-	var baseUrl = 'https://bcw-sandbox.herokuapp.com/api/YOURNAME/todos'
+	var baseUrl = 'https://bcw-sandbox.herokuapp.com/api/jeremiah/todos'
 
 	function logError(err) {
 		console.error('UMM SOMETHING BROKE: ', err)
@@ -9,10 +9,10 @@ function TodoService() {
 		//do this without breaking the controller/service responsibilities
 	}
 
-	this.getTodos = function (draw) {
+	this.getTodos = function getTodos(draw) {
 		$.get(baseUrl)
 			.then(function (res) { // <-- WHY IS THIS IMPORTANT????
-				
+				cb(res.data)
 			})
 			.fail(logError)
 	}
@@ -21,7 +21,7 @@ function TodoService() {
 		// WHAT IS THIS FOR???
 		$.post(baseUrl, todo)
 			.then(function(res){ // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
-				
+			getTodos()
 			}) 
 			.fail(logError)
 	}
@@ -45,9 +45,14 @@ function TodoService() {
 			.fail(logError)
 	}
 
-	this.removeTodo = function () {
+	this.removeTodo = function removeTodo() {
 		// Umm this one is on you to write.... It's also unique, like the ajax call above. The method is a DELETE
-		
+		$.ajax({
+			method: 'DELETE',
+			url: baseUrl + '/' + todoId,
+		  }).then(res => {
+			getTodos()
+		  })
 	}
 
 }
