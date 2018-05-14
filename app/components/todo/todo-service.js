@@ -9,10 +9,10 @@ function TodoService(cb) {
 		//do this without breaking the controller/service responsibilities
 	}
 
-	this.getTodos = function getTodos(draw,) {
+	this.getTodos = function getTodos(draw) {
 		$.get(baseUrl)
 			.then(function (res) { // <-- WHY IS THIS IMPORTANT????
-				cb(res.data)
+				draw(res.data)
 			})
 			.fail(logError)
 	}
@@ -21,12 +21,12 @@ function TodoService(cb) {
 		// WHAT IS THIS FOR???
 		$.post(baseUrl, todo)
 			.then(function(res){ // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
-			getTodos()
+			draw()
 			}) 
 			.fail(logError)
 	}
 
-	this.toggleTodoStatus = function (todoId,getTodos) {
+	this.toggleTodoStatus = function (todo,getTodos) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
 		//STEP 1: Find the todo by its index **HINT** todoList
 
@@ -36,8 +36,8 @@ function TodoService(cb) {
 		$.ajax({
 			method: 'PUT',
 			contentType: 'application/json',
-			url: baseUrl + '/' + todoId,
-			data: JSON.stringify(YOURTODOVARIABLEHERE)
+			url: baseUrl + '/' + todo._id,
+			data: JSON.stringify(todo)
 		})
 			.then(function (res) {
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
@@ -45,7 +45,7 @@ function TodoService(cb) {
 			.fail(logError)
 	}
 
-	this.removeTodo = function removeTodo() {
+	this.removeTodo = function removeTodo(todoId,getTodos) {
 		// Umm this one is on you to write.... It's also unique, like the ajax call above. The method is a DELETE
 		$.ajax({
 			method: 'DELETE',

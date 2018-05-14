@@ -9,7 +9,6 @@ function QuoteController() {
 
 
 	function drawQuote(quote) {
-		debugger
 		var template = `<div>
 	<h3>${quote.quote}</h3>
 	<h3>${quote.author}</h3>

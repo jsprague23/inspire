@@ -45,18 +45,14 @@
 
 				<div class="todo" style="width: 18rem">
 
-
-					<form onsubmit="app.controllers.TodoController.addTodoFromForm(event)">
+<div id="todo-list"></div>
+					<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
 						<label for="description">Description</label>
 						<br>
 						<input type="text" name="description" placeholder="description">
 						<br>
 						<label for="completed">Completed</label>
 						<input type="checkbox" name="completed" placeholder="Completed">
-						<br>
-						<label for="user">User email</label>
-						<br>
-						<input type="email" name="user" placeholder="user">
 						<button type="submit">Submit</button>
 
 
