@@ -11,9 +11,9 @@ function WeatherController() {
 		e.preventDefault();
 		var data = e.target
 		var newWeather = {
-			temp: res.main.temp.value,
-			description: res.weather.description.value,
-			name: res.name.value,
+			temp: e.main.temp.value,
+			description: e.weather.description.value,
+			name: e.name.value,
 
 		}
 		weatherService.getWeather(newWeather)
@@ -26,9 +26,7 @@ function WeatherController() {
 		  <h3>Temperature:${weather.temp}</h3>
 		  <h3>${weather.description}</h3>`
 
-
-
+			document.getElementById('weather').innerHTML = template
 	}
-	document.getElementById('weather').innerHTML = template
 
 }

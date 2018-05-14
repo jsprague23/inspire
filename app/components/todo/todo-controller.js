@@ -59,7 +59,7 @@ function TodoController() {
 	//PASSES THE NEW TODO TO YOUR SERVICE
 	//DON'T FORGET TO REDRAW THE SCREEN WITH THE NEW TODO
 	//YOU SHOULDN'T NEED TO CHANGE THIS
-	todoService.addTodo(todo, getTodos)
+	todoService.addTodo(draw, getTodos)
 	//^^^^^^^ EXAMPLE OF HOW TO GET YOUR TOODOS AFTER AN EDIT
 	// }
 

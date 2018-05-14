@@ -9,7 +9,7 @@ function TodoService(cb) {
 		//do this without breaking the controller/service responsibilities
 	}
 
-	this.getTodos = function getTodos(draw) {
+	this.getTodos = function getTodos(draw,) {
 		$.get(baseUrl)
 			.then(function (res) { // <-- WHY IS THIS IMPORTANT????
 				cb(res.data)
@@ -17,7 +17,7 @@ function TodoService(cb) {
 			.fail(logError)
 	}
 
-	this.addTodo = function (todo) {
+	this.addTodo = function (todo, draw) {
 		// WHAT IS THIS FOR???
 		$.post(baseUrl, todo)
 			.then(function(res){ // <-- WHAT DO YOU DO AFTER CREATING A NEW TODO?
@@ -26,7 +26,7 @@ function TodoService(cb) {
 			.fail(logError)
 	}
 
-	this.toggleTodoStatus = function (todoId) {
+	this.toggleTodoStatus = function (todoId,getTodos) {
 		// MAKE SURE WE THINK THIS ONE THROUGH
 		//STEP 1: Find the todo by its index **HINT** todoList
 
