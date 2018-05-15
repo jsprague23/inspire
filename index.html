@@ -16,7 +16,28 @@
 
 		<div class="row">
 
-			<div class="col-4 weather" id="weather">
+			<div class="col-4">
+
+
+				<button type="button" class="Collapsible btn btn-secondary todo">Toggle Open/Closed:</button>
+
+				<div class="todo" style="width: 18rem">
+
+					<div id="todo-list"></div>
+					<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+						<label for="description"></label>
+						<br>
+						<input type="text" class="" name="description" placeholder="write a to-do">
+						<!-- <label for="completed">Completed</label> -->
+						<!-- <input type="checkbox" name="completed" placeholder="Completed"> -->
+						<button class="btn btn-light" type="submit">Submit</button>
+
+
+					</form>
+
+				</div>
+			</div>
+			<div class="col weather align-items-end" id="weather">
 				Your Weather Template
 			</div>
 
@@ -26,35 +47,13 @@
 
 
 
-			<div class="col-4">
-
-
-				<button type="button" class="Collapsible todo">Toggle Open/Closed:</button>
-
-				<div class="todo" style="width: 18rem">
-
-					<div id="todo-list"></div>
-					<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-						<label for="description"></label>
-						<br>
-						<input type="text" name="description" placeholder="description">
-						<br>
-						<label for="completed">Completed</label>
-						<input type="checkbox" name="completed" placeholder="Completed">
-						<button type="submit">Submit</button>
-
-
-					</form>
-
-				</div>
-			</div>
 		</div>
-		<div class="row d-flex flex-fill justify-content-center align-items-end quote">
-			
-				<div class="col" id="quote">
-					The Quote
-				
-	
+		<div class="row d-flex flex-grow justify-content-center quote">
+
+			<div class="col" id="quote">
+				The Quote
+
+
 			</div>
 		</div>
 

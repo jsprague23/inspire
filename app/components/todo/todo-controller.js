@@ -23,7 +23,7 @@ function TodoController() {
 		for (let i = 0; i < todos.length; i++) {
 			const todo = todos[i];
 			template += `
-			<li>Description:${todo.description}<button onclick="app.controllers.todoController.removeTodo('${todo._id}')"type="button"id="" class="btn btn-default btn-sm"><span class="fas fa-trash"></span>Trash</button></li>
+			<li class="description">${todo.description}<button onclick="app.controllers.todoController.removeTodo('${todo._id}')"type="button"id="" class="btn btn-light btn-sm"><span class="fas fa-trash"></span></button></li>
 			`
 			
 		}

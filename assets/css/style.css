@@ -1,19 +1,28 @@
 .todo {
-    flex-direction:column;
-        margin:10rem;      
-        background-color: white;
+    flex-direction: row;
+        background-color: rgb(99, 93, 93);
         max-height: 25;
         overflow: hidden;
-        transition: max-height 0.5s ease-out;
-    
+        transition: max-height 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    opacity: 0.85;
 }
 
 .quote{
     color:white;
     max-height: 75rem;
-    padding: 23rem 0rem 2rem 2rem;
+    padding: 10rem 0rem 0rem 2rem;
 }
 
 .weather{
 color:white;
+padding-left: 54rem;
+}
+
+.description {
+    color: white;
+    padding: 1rem;
+}
+
+.trash {
+    padding:1rem;
 }
