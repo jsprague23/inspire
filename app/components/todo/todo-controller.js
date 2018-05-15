@@ -18,11 +18,12 @@ function TodoController() {
 	function draw(todos) {
 		//WHAT IS MY PURPOSE?
 		//BUILD YOUR TODO TEMPLATE HERE
-		var template = '<ul>'
-		//DONT FORGET TO LOOP
+		var template = `<ul><li class="counter">#of To-dos ${todos.length}</li>`
+			//DONT FORGET TO LOOP
 		for (let i = 0; i < todos.length; i++) {
 			const todo = todos[i];
 			template += `
+			
 			<li class="description">${todo.description}<button onclick="app.controllers.todoController.removeTodo('${todo._id}')"type="button"id="" class="btn btn-light btn-sm"><span class="fas fa-trash"></span></button></li>
 			`
 			

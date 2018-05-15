@@ -11,11 +11,13 @@
     color:white;
     max-height: 75rem;
     padding: 10rem 0rem 0rem 2rem;
+    text-shadow: 1px 1px black 
 }
 
 .weather{
 color:white;
 padding-left: 54rem;
+text-shadow: 1px 1px black 
 }
 
 .description {
